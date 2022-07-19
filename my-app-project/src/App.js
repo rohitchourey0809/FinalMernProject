@@ -1,10 +1,12 @@
 import React from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 import NavBar from './Navbar/NavBar';
 import { Route, Routes } from 'react-router-dom';
 import { LandingPage } from './LandingPage/LandingPage';
+import { CardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
+// import { cardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
       <Box>
         <Routes>
           <Route path="/" element={<LandingPage />}></Route>
-          <Route></Route>
+          <Route path="/Shopping/:id" element={<CardDetailPage />}></Route>
           <Route></Route>
           <Route></Route>
         </Routes>
