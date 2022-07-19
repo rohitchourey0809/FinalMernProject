@@ -1,46 +1,50 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Center, Heading } from '@chakra-ui/react';
+import { Box, Center, Flex, Grid, Heading } from '@chakra-ui/react';
 import { CardItem } from './CardItem';
 import axios from 'axios';
 
 export const CardPages = () => {
-  const [New, setNewData] = useState([]);
+  const [Shoping, setshopData] = useState([]);
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/news')
+      .get('http://localhost:8080/Shopping')
       .then(response => {
-        // console.log(response.data);
-        console.log(response.data[0].articles);
-        setNewData(response.data[0].articles);
-        // console.log(response.data);
+        setshopData(response.data);
+        console.log(response.data);
       })
       .catch(error => {
         console.error(error);
       });
   }, []);
   return (
-    <Box>
+    <Box marginLeft="250">
       <>
-        <Heading as="h2" size="xl" textAlign="center" marginTop="20px">
-          Cart
-        </Heading>
-        {New.length &&
-          New.map(e => {
-            return (
-              <CardItem
-                key={e.id}
-                id={e.id}
-                Category={e.category}
-                Headline={e.headline}
-                imageUrl={e.image_url}
-                description={e.posted_date}
-              />
-            );
-          })}
+        {/* <Center> */}
+          {' '}
+          <Heading marginLeft="500" as="h2">Cart</Heading>
+        {/* </Center> */}
+        <Grid templateColumns="repeat(2, 1fr)">
+          {Shoping.length &&
+            Shoping.map(e => {
+              return (
+                <CardItem
+                  key={e.id}
+                  id={e.id}
+                  Title={e.title}
+                  Category={e.category}
+                  Rating={e.rating.rate}
+                  imageUrl={e.image}
+                  Description={e.description}
+                  Price={e.price}
+                />
+              );
+            })}
+        </Grid>
       </>
       <Center> {/* <Checkout /> */}</Center>
     </Box>
+
     // <div>
     //   <CardItem />
     // </div>

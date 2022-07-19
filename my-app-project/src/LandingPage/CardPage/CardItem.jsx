@@ -95,60 +95,65 @@ import {
   Stack,
   Heading,
   Button,
+  Flex,
 } from '@chakra-ui/react';
 
 export const CardItem = props => {
   console.log('props', props);
   return (
-    <Center py={6}>
-      <Box
-        maxW={'445px'}
-        w={'full'}
-        // bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'2xl'}
-        rounded={'md'}
-        p={6}
-        overflow={'hidden'}
-      >
+    <Flex>
+      <Center py={6}>
         <Box
-          h={'210px'}
-          bg={'gray.100'}
-          mt={-6}
-          mx={-6}
-          mb={6}
-          pos={'relative'}
+          maxW={'445px'}
+          w={'full'}
+          // bg={useColorModeValue('white', 'gray.900')}
+          boxShadow={'2xl'}
+          rounded={'md'}
+          p={6}
+          overflow={'hidden'}
         >
-          <Image src={props.imageUrl}  />
+          <Box
+            h={'210px'}
+            bg={'gray.100'}
+            mt={-6}
+            mx={-6}
+            mb={6}
+            pos={'relative'}
+          >
+            <Image src={props.imageUrl} />
+          </Box>
+          <Stack>
+            <Text
+              color={'green.500'}
+              textTransform={'uppercase'}
+              fontWeight={800}
+              fontSize={'sm'}
+              letterSpacing={1.1}
+            >
+              {props.Category}
+            </Text>
+            <Heading
+              // color={useColorModeValue('gray.700', 'white')}
+              fontSize={'2xl'}
+              fontFamily={'body'}
+            >
+              {props.Title}
+            </Heading>
+            <Text color={'gray.500'}>{props.description}</Text>
+            <Text color={'gray.500'}>{props.Price}</Text>
+            <Text color={'gray.500'}>{props.Rating}</Text>
+          </Stack>
+          <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
+            <Button
+              // onClick={() => RemoveProduct(id)}
+              variant={'outline'}
+              leftIcon={<DeleteIcon />}
+            >
+              Remove
+            </Button>
+          </Stack>
         </Box>
-        <Stack>
-          <Text
-            color={'green.500'}
-            textTransform={'uppercase'}
-            fontWeight={800}
-            fontSize={'sm'}
-            letterSpacing={1.1}
-          >
-            {props.Category}
-          </Text>
-          <Heading
-            // color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
-            fontFamily={'body'}
-          >
-            {props.Headline}
-          </Heading>
-          <Text color={'gray.500'}>{props.description}</Text>
-        </Stack>
-        <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Button
-            // onClick={() => RemoveProduct(id)}
-            variant={'outline'}
-            leftIcon={<DeleteIcon />}
-          >
-            Remove
-          </Button>
-        </Stack>
-      </Box>
-    </Center>
+      </Center>
+    </Flex>
   );
 };
