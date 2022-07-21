@@ -6,6 +6,8 @@ import NavBar from './Navbar/NavBar';
 import { Route, Routes } from 'react-router-dom';
 import { LandingPage } from './LandingPage/LandingPage';
 import { CardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
+import { Card } from './Card/Card';
+import { Payment } from './PaymentPage/Payment';
 // import { cardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
 
 function App() {
@@ -18,8 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="/Shopping/:id" element={<CardDetailPage />}></Route>
-          <Route></Route>
-          <Route></Route>
+          <Route path="/Shopping/Card" element={<Card />}></Route>
+          <Route path="/Payment" element={<Payment />}></Route>
         </Routes>
       </Box>
     </ChakraProvider>

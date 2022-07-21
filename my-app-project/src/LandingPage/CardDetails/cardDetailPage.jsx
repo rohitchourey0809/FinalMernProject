@@ -1,14 +1,6 @@
-import { useParams } from 'react-router-dom';
-import { DeleteIcon } from '@chakra-ui/icons';
-import {
-  Box,
-  Button,
-  Center,
-  Image,
-  Img,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Link, useParams } from 'react-router-dom';
+import { AddIcon, DeleteIcon } from '@chakra-ui/icons';
+import { Box, Button, Center, Img, Text, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Rating } from '../../Rating/Rating';
@@ -23,12 +15,24 @@ export const CardDetailPage = () => {
       .get(`http://localhost:8080/Shopping/${id}`)
       .then(response => {
         setshopData(response.data);
-        console.log(response.data);
+        // console.log(response.data);
       })
       .catch(error => {
         console.error(error);
       });
   }, [id]);
+
+  const AddCardProduct = e => {
+    console.log('Addcard id', e);
+    axios
+      .post('http://localhost:8080/card', e)
+      .then(response => {
+        console.log('responseAdd', response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
   console.log('shopping', Shoping);
   return (
@@ -100,6 +104,19 @@ export const CardDetailPage = () => {
               >
                 Remove
               </Button>
+            </Center>
+            <Center>
+              <Link to={`/Shopping/card`}>
+                {' '}
+                <Button
+                  bg="black"
+                  onClick={() => AddCardProduct(Shoping)}
+                  variant={'outline'}
+                  leftIcon={<AddIcon />}
+                >
+                  Add
+                </Button>
+              </Link>
             </Center>
           </Box>
         </Box>
