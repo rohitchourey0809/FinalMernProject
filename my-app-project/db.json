@@ -243,18 +243,6 @@
   ],
   "card": [
     {
-      "id": 18,
-      "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-      "price": 9.85,
-      "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
-      "category": "women's clothing",
-      "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-      "rating": {
-        "rate": 4.7,
-        "count": 130
-      }
-    },
-    {
       "id": 2,
       "title": "Mens Casual Premium Slim Fit T-Shirts ",
       "price": 22.3,
@@ -300,6 +288,18 @@
       "rating": {
         "rate": 2.9,
         "count": 470
+      }
+    },
+    {
+      "id": 1,
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
       }
     }
   ],
@@ -352,6 +352,90 @@
       "EMAIL": "rohit_fw15_206@masai.school",
       "PASSWORD": "123",
       "id": 7
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 8
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 9
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 10
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 11
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 12
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 13
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 14
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 15
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 16
+    },
+    {
+      "FIRSTNAME": "",
+      "LASTNAME": "",
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 17
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "1241241",
+      "id": 18
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "12",
+      "id": 19
     }
   ],
   "Logindata": [
@@ -359,6 +443,41 @@
       "EMAIL": "rohit_fw15_206@masai.school",
       "PASSWORD": "123",
       "id": 1
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 2
+    },
+    {
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 3
+    },
+    {
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 4
+    },
+    {
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 5
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 6
+    },
+    {
+      "EMAIL": "",
+      "PASSWORD": "",
+      "id": 7
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 8
     }
   ]
 }

@@ -14,8 +14,7 @@ export const CardDetailPage = () => {
     axios
       .get(`http://localhost:8080/Shopping/${id}`)
       .then(response => {
-        setshopData(response.data);
-        // console.log(response.data);
+        console.log(response.data);
       })
       .catch(error => {
         console.error(error);
@@ -27,6 +26,7 @@ export const CardDetailPage = () => {
     axios
       .post('http://localhost:8080/card', e)
       .then(response => {
+        setshopData(response.data);
         console.log('responseAdd', response.data);
       })
       .catch(error => {

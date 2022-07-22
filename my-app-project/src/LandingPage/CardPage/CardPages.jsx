@@ -12,6 +12,7 @@ import {
 import { CardItem } from './CardItem';
 import axios from 'axios';
 import { ArrowLeftIcon, ArrowRightIcon, Search2Icon } from '@chakra-ui/icons';
+import { PaginaionComponent } from '../PaginaTion/PaginaTion';
 
 export const CardPages = () => {
   const [Shoping, setshopData] = useState([]);
@@ -27,7 +28,7 @@ export const CardPages = () => {
           params: {
             category: filterTitle,
             _page: page,
-            _limit: 20,
+            _limit: 10,
             q: query,
           },
         })
@@ -84,6 +85,18 @@ export const CardPages = () => {
           </Button>
         </Flex>
       </Center>
+
+      <Box>
+        <Center>
+          {' '}
+          <PaginaionComponent
+          
+            CurrentPage={page}
+            LastPage={3}
+            OnPageChange={setpage}
+          />
+        </Center>
+      </Box>
 
       <VStack className="filter-stack">
         <Stack>
