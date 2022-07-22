@@ -5,18 +5,20 @@ import {
   Center,
   Flex,
   Grid,
+  Input,
   Stack,
   VStack,
 } from '@chakra-ui/react';
 import { CardItem } from './CardItem';
 import axios from 'axios';
+import { ArrowLeftIcon, ArrowRightIcon, Search2Icon } from '@chakra-ui/icons';
 
 export const CardPages = () => {
   const [Shoping, setshopData] = useState([]);
   const [filterTitle, setfilterTitle] = useState();
-
   const [page, setpage] = useState(1);
   const [query, setquery] = useState('');
+  const [text, settext] = useState('');
 
   useEffect(() => {
     async function AllshoppingData() {
@@ -42,8 +44,48 @@ export const CardPages = () => {
 
   return (
     <>
-      <VStack className="filter-stack">
+      {/* Search by q */}
+      <Box className="SearchByQ">
+        <Flex>
+          {' '}
+          <Input value={text} onChange={e => settext(e.target.value)} />
+          <Button
+            bg={'black'}
+            color={'brown'}
+            onClick={() => setquery(text)}
+            className="Search"
+          >
+            <Search2Icon />
+          </Button>
+        </Flex>
+      </Box>
+
+      {/* Prev-Next */}
+      <Center>
         {' '}
+        <Flex>
+          <Button
+            disabled={page === 1}
+            onClick={() => setpage(page - 1)}
+            bg={'black'}
+            color={'green'}
+            gap={'2px'}
+          >
+            Prev
+            <ArrowLeftIcon />
+          </Button>
+          <Button
+            onClick={() => setpage(page + 1)}
+            bg={'black'}
+            color={'green'}
+          >
+            Next
+            <ArrowRightIcon />
+          </Button>
+        </Flex>
+      </Center>
+
+      <VStack className="filter-stack">
         <Stack>
           <Flex
             gap={'10px'}
