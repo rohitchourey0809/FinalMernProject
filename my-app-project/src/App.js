@@ -8,6 +8,9 @@ import { LandingPage } from './LandingPage/LandingPage';
 import { CardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
 import { Card } from './Card/Card';
 import { Payment } from './PaymentPage/Payment';
+import { Sign } from './SignUpPage/Sign';
+import { Login } from './LoginPages/Login';
+
 // import { cardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
 
 function App() {
@@ -19,6 +22,8 @@ function App() {
       <Box>
         <Routes>
           <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/signup" element={<Sign />}></Route>
+          <Route path="/login" element={<Login />}></Route>
           <Route path="/Shopping/:id" element={<CardDetailPage />}></Route>
           <Route path="/Shopping/Card" element={<Card />}></Route>
           <Route path="/Payment" element={<Payment />}></Route>
