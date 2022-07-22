@@ -302,5 +302,63 @@
         "count": 470
       }
     }
+  ],
+  "Signupdata": [
+    {
+      "firstname": "Rohit",
+      "lastname": "Chourey",
+      "email": "rohit_fw15_206@masai.school",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "firstname": "kamal",
+      "lastname": "Chourey",
+      "email": "rohit_fw15_206@masai.school",
+      "password": "",
+      "id": 2
+    },
+    {
+      "firstname": "Neha",
+      "lastname": "Chourey",
+      "email": "rohitchourey1122@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 4
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 5
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 6
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 7
+    }
+  ],
+  "Logindata": [
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 1
+    }
   ]
 }

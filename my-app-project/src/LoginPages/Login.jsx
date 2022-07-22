@@ -1,45 +1,70 @@
 import '../SignUpPage/Sign.css';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Box, Button, FormLabel, Input, Text } from '@chakra-ui/react';
+import axios from 'axios';
 
 export const Login = () => {
+  const [email, setemail] = useState('');
+  const [password, setpassword] = useState('');
+  const navigate = useNavigate();
+
+  async function login(e) {
+    const payload = {
+      EMAIL: email,
+      PASSWORD: password,
+    };
+    axios
+      .post('  http://localhost:8080/Logindata', payload)
+      .then(response => {
+        alert(`login Successful  -${response.status}`);
+        navigate('/');
+      })
+      .catch(error => {
+        console.log('ErrorSignup', error);
+      });
+  }
   return (
-    <div>
-      <div id="FULLDIV">
-        <div id="head">
-          <h2 id="custo">CUSTOMER LOGIN</h2>
-        </div>
+    <Box>
+      <Box id="FULLDIV">
+        <Box id="head">
+          <Text id="custo">CUSTOMER LOGIN</Text>
+        </Box>
 
         <hr />
-        <div id="signcontainer">
-          <label id="headingname">EMAIL</label>
+        <Box id="signcontainer">
+          <FormLabel id="headingname">EMAIL</FormLabel>
           <br />
-          <input
+          <Input
             type="email"
-            id="emailinp"
+            id="email"
+            onChange={e => setemail(e.target.value)}
             placeholder="Email"
             class="inputsize"
           />
           <br />
           <br />
 
-          <label id="headingname">PASSWORD</label>
+          <FormLabel id="headingname">PASSWORD</FormLabel>
           <br />
-          <input
+          <Input
             type="text"
             id="password"
+            onChange={e => setpassword(e.target.value)}
             placeholder="Password"
             class="inputsize"
           />
           <br />
           <br />
-        </div>
+        </Box>
         <br />
         <Link to={'/'}>
-          <button id="buttonlogin">LOG IN</button>
+          <Button onClick={() => login()} id="buttonlogin">
+            LOG IN
+          </Button>
         </Link>
         <br />
-        <div
+        <Box
           style={{
             margin: 'auto',
             textAlign: 'center',
@@ -47,12 +72,12 @@ export const Login = () => {
             fontWeight: 'bold',
           }}
         >
-          <p>RETURNING CUSTOMER?</p>
+          <Text>RETURNING CUSTOMER?</Text>
           <Link to={'/signup'} id="logina">
             SIGNUP
           </Link>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };

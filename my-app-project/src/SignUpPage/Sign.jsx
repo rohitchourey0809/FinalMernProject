@@ -1,19 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Box, Button, FormLabel, Input, Text } from '@chakra-ui/react';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Sign.css';
 export const Sign = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [firstname, setfirstname] = useState('');
+  const [lastname, setlastname] = useState('');
+  const [email, setemail] = useState('');
+  const [password, setpassword] = useState('');
+  const navigate = useNavigate();
+  async function Signup(e) {
+    const payload = await {
+      FIRSTNAME: firstname,
+      LASTNAME: lastname,
+      EMAIL: email,
+      PASSWORD: password,
+    };
+    axios
+      .post('  http://localhost:8080/Signupdata', payload)
+      .then(response => {
+        alert(`SignUp Successful  -${response.status}`);
+      })
+      .catch(error => {
+        console.log('ErrorSignup', error);
+      });
+
+    navigate('/login');
+  }
+
   return (
-    <div>
-      <div id="FULLDIV">
-        <div id="head">
-          <h2 id="custo">CREATE ACCOUNT</h2>
-        </div>
+    <Box>
+      <Box id="FULLDIV">
+        <Box id="head">
+          <Text id="custo">CREATE ACCOUNT</Text>
+        </Box>
 
         <hr />
-        <div id="signcontainer">
-          <label id="headingname">FIRST NAME</label>
-          <br />
-          <input
+        <Box id="signcontainer">
+          <FormLabel id="headingname">FIRST NAME</FormLabel>
+
+          <Input
+            value={firstname}
+            name="firstname"
+            onChange={e => setfirstname(e.target.value)}
             type="text"
             id="fname"
             placeholder="First Name"
@@ -22,9 +52,12 @@ export const Sign = () => {
           <br />
           <br />
 
-          <label id="headingname">LAST NAME</label>
-          <br />
-          <input
+          <FormLabel id="headingname">LAST NAME</FormLabel>
+
+          <Input
+            value={lastname}
+            name="lastname"
+            onChange={e => setlastname(e.target.value)}
             type="text"
             id="lname"
             placeholder="Last Name"
@@ -35,9 +68,12 @@ export const Sign = () => {
 
           <br />
 
-          <label id="headingname">EMAIL</label>
-          <br />
-          <input
+          <FormLabel id="headingname">EMAIL</FormLabel>
+
+          <Input
+            value={email}
+            name="email"
+            onChange={e => setemail(e.target.value)}
             type="email"
             id="emailinp"
             placeholder="Email"
@@ -46,10 +82,13 @@ export const Sign = () => {
           <br />
           <br />
 
-          <label id="headingname">PASSWORD</label>
-          <br />
-          <input
-            type="text"
+          <FormLabel id="headingname">PASSWORD</FormLabel>
+
+          <Input
+            value={password}
+            name="password"
+            onChange={e => setpassword(e.target.value)}
+            type={showPassword ? 'text' : 'password'}
             id="password"
             placeholder="Password"
             class="inputsize"
@@ -59,10 +98,17 @@ export const Sign = () => {
 
           <br />
           <Link to={'/login'}>
-            <button id="buttonsign">SIGN UP</button>
+            <Button
+              onClick={e => Signup(e)}
+              id="buttonsign"
+              type="submit"
+              variant={'ghost'}
+            >
+              SIGN UP
+            </Button>
           </Link>
           <br />
-          <div
+          <Box
             style={{
               margin: 'auto',
               textAlign: 'center',
@@ -70,13 +116,13 @@ export const Sign = () => {
               fontWeight: 'bold',
             }}
           >
-            <p>RETURNING CUSTOMER?</p>
+            <Text>RETURNING CUSTOMER?</Text>
             <Link to={'/login'} id="logina">
               LOGIN
             </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
