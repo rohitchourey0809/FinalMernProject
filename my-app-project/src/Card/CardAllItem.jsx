@@ -9,7 +9,7 @@ export const CardAllItem = props => {
     console.log('deleteId', deleteid);
 
     axios
-      .delete(`http://localhost:8080/card/${deleteid}`)
+      .delete(`http://localhost:5000/card/${deleteid}`)
       .then(response => {
         console.log('response', response);
       })
@@ -87,9 +87,8 @@ export const CardAllItem = props => {
               </Center>
               <Center>
                 <Link to={`/Payment`}>
-                  {' '}
                   <Button
-                    bg="black"
+                    bg="green"
                     // onClick={() => AddCardProduct(props)}
                     variant={'outline'}
                     leftIcon={<AddIcon />}

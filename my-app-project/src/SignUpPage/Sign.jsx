@@ -34,7 +34,7 @@ export const Sign = () => {
         PASSWORD: password,
       };
       axios
-        .post('  http://localhost:8080/Signupdata', payload)
+        .post('http://localhost:5000/register', payload)
         .then(response => {
           alert(`SignUp Successful  -${response.status}`);
           navigate('/login');

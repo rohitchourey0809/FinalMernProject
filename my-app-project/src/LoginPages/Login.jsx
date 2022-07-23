@@ -26,7 +26,7 @@ export const Login = () => {
         PASSWORD: password,
       };
       axios
-        .post('  http://localhost:8080/Logindata', payload)
+        .post('http://localhost:5000/login', payload)
         .then(response => {
           alert(`login Successful  -${response.status}`);
           navigate('/');
@@ -72,9 +72,9 @@ export const Login = () => {
           </Box>
           <br />
           {/* <Link to={'/'}> */}
-            <Button onClick={() => login()} id="buttonlogin">
-              LOG IN
-            </Button>
+          <Button onClick={() => login()} id="buttonlogin">
+            LOG IN
+          </Button>
           {/* </Link> */}
           <br />
           <Box
@@ -86,9 +86,9 @@ export const Login = () => {
             }}
           >
             <Text>RETURNING CUSTOMER?</Text>
-            {/* <Link to={'/signup'} id="logina"> */}
+            <Link to={'/signup'} id="logina">
             SIGNUP
-            {/* </Link> */}
+            </Link>
           </Box>
         </Box>
       </FormControl>

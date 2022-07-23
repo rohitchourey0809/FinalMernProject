@@ -9,15 +9,20 @@ import {
   useBreakpointValue,
   useDisclosure,
   Collapse,
+  Img,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
   CloseIcon,
+  EditIcon,
+  InfoIcon,
+  AddIcon,
   // ChevronDownIcon,
   // ChevronRightIcon,
 } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { Link } from 'react-router-dom';
+import { FaBeer } from 'react-icons/fa';
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -72,6 +77,10 @@ export default function NavBar() {
           direction={'row'}
           spacing={6}
         >
+          <Link to={'Shopping/card'}>
+            {' '}
+            <Box>Card</Box>
+          </Link>
           <Link to={'/login'}>
             {' '}
             <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'}>

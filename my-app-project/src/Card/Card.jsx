@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
@@ -11,7 +10,7 @@ export const Card = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/card')
+      .get('http://localhost:5000/card')
       .then(response => {
         console.log(response.data);
         setshopData(response.data);
@@ -20,6 +19,9 @@ export const Card = () => {
         console.log(err);
       });
   }, []);
+
+
+  
   return (
     <>
       {Carddata.map((e, index) => {

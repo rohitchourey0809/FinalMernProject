@@ -12,25 +12,24 @@ export const CardDetailPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/Shopping/${id}`)
+      .get(`http://localhost:5000/Shopping/${id}`)
       .then(response => {
-        console.log(response.data);
+        setshopData(response.data);
       })
       .catch(error => {
-        console.error(error);
+        return error;
       });
   }, [id]);
 
   const AddCardProduct = e => {
     console.log('Addcard id', e);
     axios
-      .post('http://localhost:8080/card', e)
+      .post('http://localhost:5000/card', e)
       .then(response => {
-        setshopData(response.data);
-        console.log('responseAdd', response.data);
+        return response;
       })
       .catch(error => {
-        console.log(error);
+        return error;
       });
   };
 

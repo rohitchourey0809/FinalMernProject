@@ -24,7 +24,7 @@ export const CardPages = () => {
   useEffect(() => {
     async function AllshoppingData() {
       await axios
-        .get('http://localhost:8080/Shopping', {
+        .get('http://localhost:5000/Shopping', {
           params: {
             category: filterTitle,
             _page: page,
@@ -90,7 +90,6 @@ export const CardPages = () => {
         <Center>
           {' '}
           <PaginaionComponent
-          
             CurrentPage={page}
             LastPage={3}
             OnPageChange={setpage}
