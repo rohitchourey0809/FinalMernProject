@@ -16,12 +16,10 @@ const register = async (req, res) => {
       return res.status(500).send({ message: 'Email exist ' });
     }
     const userRegister = await User.create(req.body);
-    console.log(userRegister);
+    console.log('userRegister', userRegister);
 
     console.log('jwt token', `${process.env.JWT_SECRET_KEY}`);
     // <===============token=========>
-
-    // var token = jwt.sign({userRegistrt}, `${process.env.JWT_SECRET_KEY}`)
 
     var token = jwt.sign({ userRegister }, `${process.env.JWT_SECRET_KEY}`);
 

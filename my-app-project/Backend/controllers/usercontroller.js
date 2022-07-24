@@ -8,7 +8,7 @@ router.get(
   '/',
 
   body('FIRSTNAME').not().isEmpty().isLength({ min: 2, max: 10 }),
-  // password must be at least 5 chars long
+
   body('LASTNAME').not().isEmpty().isLength({ min: 2, max: 10 }),
 
   body('EMAIL').isEmail(),

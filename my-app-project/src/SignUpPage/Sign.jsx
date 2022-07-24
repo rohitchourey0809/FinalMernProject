@@ -36,6 +36,7 @@ export const Sign = () => {
       axios
         .post('http://localhost:5000/register', payload)
         .then(response => {
+          console.log(response.data);
           alert(`SignUp Successful  -${response.status}`);
           navigate('/login');
         })

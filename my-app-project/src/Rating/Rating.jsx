@@ -1,22 +1,21 @@
-import { Box, Flex } from "@chakra-ui/react";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Box, Flex } from '@chakra-ui/react';
+import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
 
 export const Rating = ({ rating }) => {
   return (
     <Box d="flex" alignItems="center">
       <Flex>
-        {" "}
+        {' '}
         {Array(5)
-          .fill("")
+          .fill('')
           .map((_, i) => {
             const roundedRating = Math.round(rating * 2) / 2;
             if (roundedRating - i >= 1) {
               return (
                 <BsStarFill
                   key={i}
-                  style={{ marginLeft: "1" }}
-                  color={i < rating ? "teal.500" : "gray.300"}
+                  style={{ marginLeft: '1' }}
+                  color={i < rating ? 'teal.500' : 'gray.300'}
                 />
               );
             }
@@ -25,9 +24,9 @@ export const Rating = ({ rating }) => {
                 <BsStarHalf
                   key={i}
                   style={{
-                    marginLeft: "1",
+                    marginLeft: '1',
 
-                    Color: "black",
+                    Color: 'black',
                   }}
                 />
               );
@@ -36,9 +35,9 @@ export const Rating = ({ rating }) => {
               <BsStar
                 key={i}
                 style={{
-                  marginLeft: "1",
-                  backgroundColor: "brown.1000",
-                  bg: "red",
+                  marginLeft: '1',
+                  backgroundColor: 'brown.1000',
+                  bg: 'red',
                 }}
               />
             );

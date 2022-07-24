@@ -243,27 +243,27 @@
   ],
   "card": [
     {
-      "id": 9,
-      "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-      "price": 64,
-      "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-      "category": "electronics",
-      "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+      "id": 2,
+      "title": "Mens Casual Premium Slim Fit T-Shirts ",
+      "price": 22.3,
+      "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       "rating": {
-        "rate": 3.3,
-        "count": 203
+        "rate": 4.1,
+        "count": 259
       }
     },
     {
-      "id": 10,
-      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-      "price": 109,
-      "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-      "category": "electronics",
-      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+      "id": 8,
+      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "price": 10.99,
+      "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
       "rating": {
-        "rate": 2.9,
-        "count": 470
+        "rate": 1.9,
+        "count": 100
       }
     },
     {
@@ -300,6 +300,163 @@
       "EMAIL": "rohit_fw15_206@masai.school",
       "PASSWORD": "123",
       "id": 3
+    },
+    {
+      "FIRSTNAME": "ram",
+      "LASTNAME": "ram",
+      "EMAIL": "ram1@gmail.com",
+      "PASSWORD": "ram@gmail.com",
+      "id": 4
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 5
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 6
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 7
+    },
+    {
+      "FIRSTNAME": "igya",
+      "LASTNAME": "chourey",
+      "EMAIL": "kha11246@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 8
+    },
+    {
+      "FIRSTNAME": "gya",
+      "LASTNAME": "chourey",
+      "EMAIL": "k246@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 9
+    },
+    {
+      "FIRSTNAME": "gya",
+      "LASTNAME": "chourey",
+      "EMAIL": "k246@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 10
+    },
+    {
+      "FIRSTNAME": "gya",
+      "LASTNAME": "chourey",
+      "EMAIL": "k2@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 11
+    },
+    {
+      "FIRSTNAME": "gya",
+      "LASTNAME": "chourey",
+      "EMAIL": "k2@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 12
+    },
+    {
+      "FIRSTNAME": "gya",
+      "LASTNAME": "chourey",
+      "EMAIL": "k2@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 13
+    },
+    {
+      "FIRSTNAME": "gya",
+      "LASTNAME": "chourey",
+      "EMAIL": "135@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 14
+    },
+    {
+      "FIRSTNAME": "gya",
+      "LASTNAME": "chourey",
+      "EMAIL": "prata@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 15
+    },
+    {
+      "FIRSTNAME": "r1",
+      "LASTNAME": "chourey",
+      "EMAIL": "prat1241413a@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 16
+    },
+    {
+      "FIRSTNAME": "r1",
+      "LASTNAME": "chourey",
+      "EMAIL": "pratkjsfjkakc1241413a@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 17
+    },
+    {
+      "FIRSTNAME": "r1",
+      "LASTNAME": "chourey",
+      "EMAIL": "pratkjsfjkakc1241413a@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 18
+    },
+    {
+      "FIRSTNAME": "ROHIT",
+      "LASTNAME": "CHOUREY",
+      "EMAIL": "rohit1995chourey@gmail.com",
+      "PASSWORD": "",
+      "id": 19
+    },
+    {
+      "FIRSTNAME": "r1",
+      "LASTNAME": "chourey",
+      "EMAIL": "pratkjsfjkakc1241413a@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 20
+    },
+    {
+      "FIRSTNAME": "manoj",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 21
+    },
+    {
+      "FIRSTNAME": "r1",
+      "LASTNAME": "chourey",
+      "EMAIL": "pralfksddkc1241413a@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 22
+    },
+    {
+      "FIRSTNAME": "r1",
+      "LASTNAME": "chourey",
+      "EMAIL": "pralfksddkc1241413a@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 23
+    },
+    {
+      "id": 24
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 25
+    },
+    {
+      "FIRSTNAME": "r1",
+      "LASTNAME": "chourey",
+      "EMAIL": "praaljfhjf3a@gmail.com",
+      "PASSWORD": "R@1234567",
+      "id": 26
     }
   ],
   "login": [
@@ -312,6 +469,31 @@
       "EMAIL": "rohit_fw15_206@masai.school",
       "PASSWORD": "123",
       "id": 2
+    },
+    {
+      "EMAIL": "ram1@gmail.com",
+      "PASSWORD": "ram1@gmail.com",
+      "id": 3
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 4
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 5
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 6
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "123",
+      "id": 7
     }
   ]
 }

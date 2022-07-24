@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Rating } from '../Rating/Rating';
 import { CardAllItem } from './CardAllItem';
 
 export const Card = () => {
@@ -20,8 +18,6 @@ export const Card = () => {
       });
   }, []);
 
-
-  
   return (
     <>
       {Carddata.map((e, index) => {

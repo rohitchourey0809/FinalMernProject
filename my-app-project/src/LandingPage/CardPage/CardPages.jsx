@@ -168,7 +168,7 @@ export const CardPages = () => {
                   id={e.id}
                   Title={e.title}
                   Category={e.category}
-                  Rating={e.rating.rate}
+                  rating={e.rating.rate}
                   imageUrl={e.image}
                   Description={e.description}
                   Price={e.price}

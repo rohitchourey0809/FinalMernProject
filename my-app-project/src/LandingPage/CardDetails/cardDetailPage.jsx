@@ -9,12 +9,15 @@ export const CardDetailPage = () => {
   const { id } = useParams();
   console.log('detail-id', id);
   const [Shoping, setshopData] = useState([]);
+  const [Rate, setRate] = useState([]);
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/Shopping/${id}`)
       .then(response => {
         setshopData(response.data);
+        setRate(response.data.rating.rate);
+        console.log(response.data.rating.rate, '(response.data.rating.rate');
       })
       .catch(error => {
         return error;
@@ -54,7 +57,7 @@ export const CardDetailPage = () => {
                 fontSize="30px"
                 fontWeight="bold"
                 margin={'auto'}
-                colorScheme="pink"
+                color="pink"
                 fontStyle="italic"
               >
                 {Shoping.title}
@@ -65,36 +68,18 @@ export const CardDetailPage = () => {
                 ${Shoping.price}
               </Text>
             </Center>
-            <Center>{/* <Rating /> */}</Center>
             <Center>
-              <Text color="dark green">
-                <Rating rating={Shoping.rating} />
-              </Text>
+              <Rating rating={Rate} />
             </Center>
-            <Center>
+
+            <Center display={'flex'} flexWrap={'wrap'}>
               {' '}
-              <Text
-                fontSize="20px"
-                fontWeight="bold"
-                overflow="hidden"
-                margin="auto"
-                width="1000px"
-              >
+              <Text fontSize="15px" fontWeight="bold" margin="auto">
                 {Shoping.description}
               </Text>
             </Center>
-            <Center>
-              {' '}
-              <Text
-                fontSize="20px"
-                fontWeight="bold"
-                overflow="hidden"
-                margin="auto"
-                width="1000px"
-              >
-                {/* {perks} */}
-              </Text>
-            </Center>
+         
+         
             <Center>
               <Button
                 // onClick={() => RemoveProduct(id)}
@@ -108,7 +93,7 @@ export const CardDetailPage = () => {
               <Link to={`/Shopping/card`}>
                 {' '}
                 <Button
-                  bg="black"
+                  bg="yellow.500"
                   onClick={() => AddCardProduct(Shoping)}
                   variant={'outline'}
                   leftIcon={<AddIcon />}

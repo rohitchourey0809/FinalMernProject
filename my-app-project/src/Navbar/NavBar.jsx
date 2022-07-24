@@ -9,21 +9,10 @@ import {
   useBreakpointValue,
   useDisclosure,
   Collapse,
-  Img,
 } from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-  CloseIcon,
-  EditIcon,
-  InfoIcon,
-  AddIcon,
-  // ChevronDownIcon,
-  // ChevronRightIcon,
-} from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { Link } from 'react-router-dom';
-import { FaBeer } from 'react-icons/fa';
-
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -66,9 +55,7 @@ export default function NavBar() {
             Logo
           </Text>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            {/* <DesktopNav /> */}
-          </Flex>
+          <Flex display={{ base: 'none', md: 'flex' }} ml={10}></Flex>
         </Flex>
 
         <Stack
@@ -79,11 +66,31 @@ export default function NavBar() {
         >
           <Link to={'Shopping/card'}>
             {' '}
-            <Box>Card</Box>
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              bg="rgb(33,31,32)"
+              _hover={{
+                bg: 'black.300',
+              }}
+            >
+              Card
+            </Button>
           </Link>
           <Link to={'/login'}>
             {' '}
-            <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'}>
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              bg={'purple.400'}
+              _hover={{
+                bg: 'black.300',
+              }}
+            >
               Sign In
             </Button>
           </Link>
@@ -96,7 +103,7 @@ export default function NavBar() {
               color={'white'}
               bg={'pink.400'}
               _hover={{
-                bg: 'pink.300',
+                bg: 'black.300',
               }}
             >
               Sign Up

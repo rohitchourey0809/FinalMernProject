@@ -32,10 +32,10 @@ export const CardAllItem = props => {
             <Box>
               <Center>
                 <Text
-                  fontSize="30px"
+                  fontSize="20px"
                   fontWeight="bold"
                   margin={'auto'}
-                  colorScheme="pink"
+                  color="pink"
                   fontStyle="italic"
                 >
                   {props.title}
@@ -49,7 +49,7 @@ export const CardAllItem = props => {
               <Center>{/* <Rating /> */}</Center>
               <Center>
                 <Text color="dark green">
-                  <Rating rating={props.rating} />
+                  <Rating rating={props.rating.rate} />
                 </Text>
               </Center>
               <Center>
@@ -67,11 +67,10 @@ export const CardAllItem = props => {
               <Center>
                 {' '}
                 <Text
-                  fontSize="20px"
+                  fontSize="10px"
                   fontWeight="bold"
                   overflow="hidden"
                   margin="auto"
-                  width="1000px"
                 >
                   {/* {perks} */}
                 </Text>
@@ -86,7 +85,7 @@ export const CardAllItem = props => {
                 </Button>
               </Center>
               <Center>
-                <Link to={`/Payment`}>
+                <Link to={`/Shopping/Payment`}>
                   <Button
                     bg="green"
                     // onClick={() => AddCardProduct(props)}

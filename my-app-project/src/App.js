@@ -5,11 +5,12 @@ import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 import NavBar from './Navbar/NavBar';
 import { Route, Routes } from 'react-router-dom';
 import { LandingPage } from './LandingPage/LandingPage';
-import { CardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
+
 import { Card } from './Card/Card';
 import { Payment } from './PaymentPage/Payment';
 import { Sign } from './SignUpPage/Sign';
 import { Login } from './LoginPages/Login';
+import { CardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
 
 // import { cardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
 
@@ -26,7 +27,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/Shopping/:id" element={<CardDetailPage />}></Route>
           <Route path="/Shopping/Card" element={<Card />}></Route>
-          <Route path="/Payment" element={<Payment />}></Route>
+          <Route path="/Shopping/Payment" element={<Payment />}></Route>
         </Routes>
       </Box>
     </ChakraProvider>
