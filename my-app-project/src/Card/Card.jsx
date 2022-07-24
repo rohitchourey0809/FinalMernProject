@@ -12,6 +12,7 @@ export const Card = () => {
       .then(response => {
         console.log(response.data);
         setshopData(response.data);
+        
       })
       .catch(err => {
         console.log(err);

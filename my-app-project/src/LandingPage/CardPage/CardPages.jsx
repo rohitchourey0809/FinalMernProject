@@ -46,25 +46,28 @@ export const CardPages = () => {
   return (
     <>
       {/* Search by q */}
-      <Box className="SearchByQ">
+      <Box className="center SearchByQ">
         <Flex>
           {' '}
-          <Input value={text} onChange={e => settext(e.target.value)} />
-          <Button
-            bg={'black'}
-            color={'brown'}
-            onClick={() => setquery(text)}
-            className="Search"
-          >
-            <Search2Icon />
-          </Button>
+          <Center margin="auto">
+            {' '}
+            <Input value={text} onChange={e => settext(e.target.value)} />
+            <Button
+              bg={'black'}
+              color={'brown'}
+              onClick={() => setquery(text)}
+              className="Search"
+            >
+              <Search2Icon />
+            </Button>
+          </Center>
         </Flex>
       </Box>
 
       {/* Prev-Next */}
       <Center>
         {' '}
-        <Flex>
+        <Flex flexWrap="wrap">
           <Button
             disabled={page === 1}
             onClick={() => setpage(page - 1)}
@@ -87,7 +90,7 @@ export const CardPages = () => {
       </Center>
 
       <Box>
-        <Center>
+        <Center flexWrap="wrap">
           {' '}
           <PaginaionComponent
             CurrentPage={page}
@@ -105,6 +108,7 @@ export const CardPages = () => {
             color="pink"
             bg={'black'}
             borderRadius={'10px'}
+            flexWrap="wrap"
           >
             <Box>
               <Button

@@ -63,7 +63,7 @@
 }
 
 #FULLDIV {
-  background-color: rgb(31, 15, 3);
+  background-color: rgb(25,132,84);
   margin: auto;
   text-align: center;
   width: 50%;
@@ -71,7 +71,7 @@
   transition-duration: 10s;
 }
 #FULLDIV:hover {
-  background-color: rgb(89, 43, 9);
+  background-color: rgb(151, 52, 52);
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;

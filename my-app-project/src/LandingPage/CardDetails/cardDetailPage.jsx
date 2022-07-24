@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { AddIcon, DeleteIcon } from '@chakra-ui/icons';
-import { Box, Button, Center, Img, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Img, Text, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Rating } from '../../Rating/Rating';
@@ -78,30 +78,31 @@ export const CardDetailPage = () => {
                 {Shoping.description}
               </Text>
             </Center>
-         
-         
-            <Center>
-              <Button
-                // onClick={() => RemoveProduct(id)}
-                variant={'outline'}
-                leftIcon={<DeleteIcon />}
-              >
-                Remove
-              </Button>
-            </Center>
-            <Center>
-              <Link to={`/Shopping/card`}>
-                {' '}
+
+            <Flex >
+              <Center>
                 <Button
-                  bg="yellow.500"
-                  onClick={() => AddCardProduct(Shoping)}
+                 bg={"red.400"}
                   variant={'outline'}
-                  leftIcon={<AddIcon />}
+                  leftIcon={<DeleteIcon />}
                 >
-                  Add
+                  Remove
                 </Button>
-              </Link>
-            </Center>
+              </Center>
+              <Center>
+                <Link to={`/Shopping/card`}>
+                  {' '}
+                  <Button
+                    bg="yellow.500"
+                    onClick={() => AddCardProduct(Shoping)}
+                    variant={'outline'}
+                    leftIcon={<AddIcon />}
+                  >
+                    Add
+                  </Button>
+                </Link>
+              </Center>
+            </Flex>
           </Box>
         </Box>
       </Center>

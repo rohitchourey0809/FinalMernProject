@@ -1,0 +1,19 @@
+/* Mobile View */
+@media screen and (min-width: 250px) and (max-width: 480px) {
+  body {
+    grid-template-columns: repeat(1, 100px);
+  }
+}
+
+/* Tablet View */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Laptop View */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

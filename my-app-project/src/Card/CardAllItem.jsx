@@ -1,14 +1,6 @@
 import React from 'react';
 import { AddIcon, DeleteIcon } from '@chakra-ui/icons';
-import {
-  Box,
-  Button,
-  Center,
-  Img,
-  Spinner,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Img, Text, VStack } from '@chakra-ui/react';
 import { Rating } from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -19,8 +11,8 @@ export const CardAllItem = props => {
     axios
       .delete(`http://localhost:5000/card/${deleteid}`)
       .then(response => {
-        <Spinner />;
         console.log('response', response);
+        window.location.reload(false);
         alert(`Delete Item Successful: ${deleteid}`);
       })
       .catch(err => console.log(err));
@@ -29,17 +21,18 @@ export const CardAllItem = props => {
     <div>
       <VStack>
         <Center
-          bordercolor="silver"
-          border="2px"
+          // border="2px"
           height="100%"
-          width="100%"
-          marginTop={'100px'}
+          width="98%"
+          margin={1}
+          bg="grey.100"
+          boxShadow="2xl"
         >
-          <Box display="flex" marginTop={'100px'}>
+          <Box display="flex" p={10} margin={1}>
             <Box>
-              <Img src={props.image} alt={props.title} />
+              <Img src={props.image} alt={props.title} p={5} />
             </Box>
-            <Box>
+            <Box margin={1}>
               <Center>
                 <Text
                   fontSize="20px"
@@ -64,47 +57,49 @@ export const CardAllItem = props => {
               </Center>
               <Center>
                 {' '}
-                <Text
-                  fontSize="20px"
-                  fontWeight="bold"
-                  overflow="hidden"
-                  margin="auto"
-                  width="1000px"
-                >
-                  {props.description}
-                </Text>
+                <Flex flexWrap="wrap">
+                  {' '}
+                  <Text
+                   
+                    fontSize="15px"
+                    fontWeight="bold"
+                    overflow="hidden"
+                    marginleft="10px"
+                    width="1000px"
+                  >
+                    {props.description}
+                  </Text>
+                </Flex>
               </Center>
               <Center>
                 {' '}
-                <Text
-                  fontSize="10px"
-                  fontWeight="bold"
-                  overflow="hidden"
-                  margin="auto"
-                >
+                <Text fontSize="10px" fontWeight="bold" overflow="hidden">
                   {/* {perks} */}
                 </Text>
               </Center>
               <Center>
-                <Button
-                  onClick={() => RemoveProduct(props.id)}
-                  variant={'outline'}
-                  leftIcon={<DeleteIcon />}
-                >
-                  Remove
-                </Button>
-              </Center>
-              <Center>
-                <Link to={`/Shopping/Payment`}>
+                {' '}
+                <Flex>
+                  {' '}
                   <Button
-                    bg="green"
-                    // onClick={() => AddCardProduct(props)}
+                    bg={'red.500'}
+                    onClick={() => RemoveProduct(props.id)}
                     variant={'outline'}
-                    leftIcon={<AddIcon />}
+                    leftIcon={<DeleteIcon />}
                   >
-                    Add
+                    Remove
                   </Button>
-                </Link>
+                  <Link to={`/Shopping/Payment`}>
+                    <Button
+                      bg="green"
+                      // onClick={() => AddCardProduct(props)}
+                      variant={'outline'}
+                      leftIcon={<AddIcon />}
+                    >
+                      Add
+                    </Button>
+                  </Link>
+                </Flex>
               </Center>
             </Box>
           </Box>
