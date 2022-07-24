@@ -9,12 +9,30 @@ import {
   useBreakpointValue,
   useDisclosure,
   Collapse,
+  Icon,
 } from '@chakra-ui/react';
+// import { Icon } from '@chakra-ui/react';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import AvatarWithRipple from '../Avatar/Avatar';
 export default function NavBar() {
+  const [counter, setcounter] = useState(0);
   const { isOpen, onToggle } = useDisclosure();
+
+  useEffect(() => {
+    axios
+      .get(' http://localhost:5000/card')
+      .then(response => {
+        setcounter(response.data.length);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <Box>
@@ -44,6 +62,9 @@ export default function NavBar() {
           />
         </Flex>
         <Flex>
+          <AvatarWithRipple />
+        </Flex>
+        <Flex>
           <ColorModeSwitcher />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
@@ -54,8 +75,6 @@ export default function NavBar() {
           >
             Logo
           </Text>
-
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}></Flex>
         </Flex>
 
         <Stack
@@ -65,18 +84,19 @@ export default function NavBar() {
           spacing={6}
         >
           <Link to={'Shopping/card'}>
-            {' '}
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
+              fontSize={'20px'}
               fontWeight={600}
               color={'white'}
               bg="rgb(33,31,32)"
               _hover={{
                 bg: 'black.300',
               }}
+              position="relative"
             >
-              Card
+              <Icon as={AiOutlineShoppingCart} h={12} w={10} color={'green'} />
+              {counter}
             </Button>
           </Link>
           <Link to={'/login'}>

@@ -1,6 +1,14 @@
 import React from 'react';
 import { AddIcon, DeleteIcon } from '@chakra-ui/icons';
-import { Box, Button, Center, Img, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Center,
+  Img,
+  Spinner,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 import { Rating } from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -11,7 +19,9 @@ export const CardAllItem = props => {
     axios
       .delete(`http://localhost:5000/card/${deleteid}`)
       .then(response => {
+        <Spinner />;
         console.log('response', response);
+        alert(`Delete Item Successful: ${deleteid}`);
       })
       .catch(err => console.log(err));
   };
@@ -35,7 +45,7 @@ export const CardAllItem = props => {
                   fontSize="20px"
                   fontWeight="bold"
                   margin={'auto'}
-                  color="pink"
+                  color="pink.500"
                   fontStyle="italic"
                 >
                   {props.title}

@@ -1,7 +1,5 @@
 import React from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
-// import { ColorModeSwitcher } from './ColorModeSwitcher';
-
 import NavBar from './Navbar/NavBar';
 import { Route, Routes } from 'react-router-dom';
 import { LandingPage } from './LandingPage/LandingPage';
@@ -11,6 +9,7 @@ import { Payment } from './PaymentPage/Payment';
 import { Sign } from './SignUpPage/Sign';
 import { Login } from './LoginPages/Login';
 import { CardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
+import LargeWithAppLinksAndSocial from './Footer/Footer';
 
 // import { cardDetailPage } from './LandingPage/CardDetails/cardDetailPage';
 
@@ -29,6 +28,9 @@ function App() {
           <Route path="/Shopping/Card" element={<Card />}></Route>
           <Route path="/Shopping/Payment" element={<Payment />}></Route>
         </Routes>
+      </Box>
+      <Box>
+        <LargeWithAppLinksAndSocial />
       </Box>
     </ChakraProvider>
   );
