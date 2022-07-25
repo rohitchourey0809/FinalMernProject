@@ -8,11 +8,10 @@ export const Card = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/card')
+      .get('https://json-deploy.herokuapp.com/Shopping/card')
       .then(response => {
         console.log(response.data);
         setshopData(response.data);
-        
       })
       .catch(err => {
         console.log(err);

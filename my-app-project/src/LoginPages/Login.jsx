@@ -26,7 +26,7 @@ export const Login = () => {
         PASSWORD: password,
       };
       axios
-        .post('http://localhost:5000/login', payload)
+        .post('https://json-deploy.herokuapp.com/login', payload)
         .then(response => {
           alert(`login Successful  -${response.status}`);
           navigate('/');
@@ -87,7 +87,7 @@ export const Login = () => {
           >
             <Text>RETURNING CUSTOMER?</Text>
             <Link to={'/signup'} id="logina">
-            SIGNUP
+              SIGNUP
             </Link>
           </Box>
         </Box>

@@ -25,7 +25,7 @@ export default function NavBar() {
 
   useEffect(() => {
     axios
-      .get(' http://localhost:5000/card')
+      .get('https://json-deploy.herokuapp.com/Shopping/card')
       .then(response => {
         setcounter(response.data.length);
       })

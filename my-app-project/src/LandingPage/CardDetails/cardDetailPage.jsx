@@ -27,7 +27,7 @@ export const CardDetailPage = () => {
   const AddCardProduct = e => {
     console.log('Addcard id', e);
     axios
-      .post('http://localhost:5000/card', e)
+      .post('https://json-deploy.herokuapp.com/Shopping/card', e)
       .then(response => {
         return response;
       })
@@ -79,10 +79,10 @@ export const CardDetailPage = () => {
               </Text>
             </Center>
 
-            <Flex >
+            <Flex>
               <Center>
                 <Button
-                 bg={"red.400"}
+                  bg={'red.400'}
                   variant={'outline'}
                   leftIcon={<DeleteIcon />}
                 >

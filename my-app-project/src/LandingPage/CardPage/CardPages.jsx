@@ -24,7 +24,7 @@ export const CardPages = () => {
   useEffect(() => {
     async function AllshoppingData() {
       await axios
-        .get('http://localhost:5000/Shopping', {
+        .get('https://json-deploy.herokuapp.com/Shopping', {
           params: {
             category: filterTitle,
             _page: page,

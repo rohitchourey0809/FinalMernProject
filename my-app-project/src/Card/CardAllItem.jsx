@@ -9,7 +9,7 @@ export const CardAllItem = props => {
     console.log('deleteId', deleteid);
 
     axios
-      .delete(`http://localhost:5000/card/${deleteid}`)
+      .delete(`https://json-deploy.herokuapp.com/Shopping/card/${deleteid}`)
       .then(response => {
         console.log('response', response);
         window.location.reload(false);
@@ -60,7 +60,6 @@ export const CardAllItem = props => {
                 <Flex flexWrap="wrap">
                   {' '}
                   <Text
-                   
                     fontSize="15px"
                     fontWeight="bold"
                     overflow="hidden"
