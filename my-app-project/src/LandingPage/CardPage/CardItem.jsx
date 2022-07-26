@@ -14,17 +14,17 @@ import { Rating } from '../../Rating/Rating';
 import './CardItem.css';
 
 export const CardItem = props => {
-  console.log('props', props);
+  // console.log('props', props);
   return (
     <Link to={`/Shopping/${props.id}`}>
-      <Grid templateColumns="repeat(2, 300px)" class="container">
+      <Grid templateColumns="repeat(2, 300px)" className="container">
         <Center py={6}>
           <GridItem
             width={'1000px'}
             boxShadow={'2xl'}
             rounded={'md'}
             p={5}
-            class="elements"
+            className="elements"
           >
             <Box h={'210px'} bg={'gray.100'}>
               <Image
