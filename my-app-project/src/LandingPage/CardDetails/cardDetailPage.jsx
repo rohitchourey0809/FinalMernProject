@@ -8,12 +8,12 @@ import { Rating } from '../../Rating/Rating';
 export const CardDetailPage = () => {
   const { id } = useParams();
   console.log('detail-id', id);
-  const [Shoping, setshopData] = useState([]);
+  const [Shoping, setshopData] = useState({});
   const [Rate, setRate] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/Shopping/${id}`)
+      .get(`https://json-deploy.herokuapp.com/Shopping/${id}`)
       .then(response => {
         setshopData(response.data);
         setRate(response.data.rating.rate);
@@ -27,12 +27,12 @@ export const CardDetailPage = () => {
   const AddCardProduct = e => {
     console.log('Addcard id', e);
     axios
-      .post('https://json-deploy.herokuapp.com/Shopping/card', e)
+      .post('https://json-deploy.herokuapp.com/card', e)
       .then(response => {
-        return response;
+        console.log(response);
       })
       .catch(error => {
-        return error;
+        console.log(error);
       });
   };
 

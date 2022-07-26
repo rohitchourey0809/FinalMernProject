@@ -5,11 +5,12 @@ import { Rating } from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 export const CardAllItem = props => {
+  // console.log(props.rating.rate);
   const RemoveProduct = deleteid => {
     console.log('deleteId', deleteid);
 
     axios
-      .delete(`https://json-deploy.herokuapp.com/Shopping/card/${deleteid}`)
+      .delete(`https://json-deploy.herokuapp.com/card/${deleteid}`)
       .then(response => {
         console.log('response', response);
         window.location.reload(false);
@@ -30,7 +31,7 @@ export const CardAllItem = props => {
         >
           <Box display="flex" p={10} margin={1}>
             <Box>
-              <Img src={props.image} alt={props.title} p={5} />
+              <Img src={props.image} alt={props.title} p={2} />
             </Box>
             <Box margin={1}>
               <Center>

@@ -1,18 +1,18 @@
-const User = require('../models/usermodel');
-const express = require('express');
-const { body, validationResult } = require('express-validator');
+const User = require("../models/usermodel");
+const express = require("express");
+const { body, validationResult } = require("express-validator");
 
 const router = express.Router();
 
-router.get(
-  '/',
+router.post(
+  "/register",
 
-  body('FIRSTNAME').not().isEmpty().isLength({ min: 2, max: 10 }),
+  body("FIRSTNAME").not().isEmpty().isLength({ min: 2, max: 10 }),
 
-  body('LASTNAME').not().isEmpty().isLength({ min: 2, max: 10 }),
+  body("LASTNAME").not().isEmpty().isLength({ min: 2, max: 10 }),
 
-  body('EMAIL').isEmail(),
-  body('PASSWORD')
+  body("EMAIL").isEmail(),
+  body("PASSWORD")
     .isString()
     .isLength({ min: 5 })
     .not()
