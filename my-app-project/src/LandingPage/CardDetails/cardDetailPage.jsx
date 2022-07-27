@@ -53,8 +53,8 @@ export const CardDetailPage = () => {
             <Img
               src={Shoping.image}
               alt={Shoping.title}
-              h={240}
-              w={240}
+             
+              p={10}
               backgroundColor="brown"
             />
           </Box>
