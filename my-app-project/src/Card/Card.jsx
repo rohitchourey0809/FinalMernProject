@@ -27,7 +27,7 @@ export const Card = () => {
             id={e.id}
             title={e.title}
             category={e.category}
-            rating={e.rating.rate}
+            rating={e.rating}
             image={e.image}
             description={e.description}
             price={e.price}

@@ -5,7 +5,7 @@ import { Rating } from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 export const CardAllItem = props => {
-  console.log(props.rating);
+  console.log(props.rating.rate);
   const RemoveProduct = deleteid => {
     console.log('deleteId', deleteid);
 
@@ -59,7 +59,7 @@ export const CardAllItem = props => {
               <Center>{/* <Rating /> */}</Center>
               <Center>
                 <Text color="dark green">
-                  <Rating rating={props.rating} />
+                  <Rating rating={props.rating.rate} />
                 </Text>
               </Center>
               <Center>
