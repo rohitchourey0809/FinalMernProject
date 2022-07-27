@@ -7,12 +7,13 @@ import { CardAllItem } from './CardAllItem';
 
 export const Card = () => {
   const [Carddata, setshopData] = useState([]);
+  // const [Rate, setRate] = useState([]);
 
   useEffect(() => {
     axios
       .get('https://finalmernproject.herokuapp.com/card')
       .then(response => {
-        console.log(response.data);
+        // setRate(response.data.rating.rate);
         setshopData(response.data);
       })
       .catch(err => {
