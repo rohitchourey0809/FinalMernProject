@@ -5,7 +5,7 @@ import { Rating } from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 export const CardAllItem = props => {
-  // console.log(props.rating.rate);
+  console.log(props.rating);
   const RemoveProduct = deleteid => {
     console.log('deleteId', deleteid);
 
@@ -28,10 +28,16 @@ export const CardAllItem = props => {
           margin={1}
           bg="grey.100"
           boxShadow="2xl"
+          backgroundColor="brown"
         >
           <Box display="flex" p={10} margin={1}>
             <Box>
-              <Img src={props.image} alt={props.title} p={2} />
+              <Img
+                src={props.image}
+                alt={props.title}
+                p={2}
+                backgroundColor="brown"
+              />
             </Box>
             <Box margin={1}>
               <Center>
@@ -53,7 +59,7 @@ export const CardAllItem = props => {
               <Center>{/* <Rating /> */}</Center>
               <Center>
                 <Text color="dark green">
-                  <Rating rating={props.rating.rate} />
+                  <Rating rating={props.rating} />
                 </Text>
               </Center>
               <Center>

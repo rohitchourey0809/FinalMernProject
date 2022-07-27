@@ -41,15 +41,22 @@ export const CardDetailPage = () => {
     // <div></div>
     <VStack>
       <Center
-        bordercolor="silver"
-        border="2px"
         height="100%"
         width="100%"
-        marginTop={'100px'}
+        marginTop={20}
+        p={50}
+        boxShadow="dark-lg"
+        backgroundColor="brown"
       >
-        <Box display="flex" marginTop={'100px'}>
+        <Box display="flex">
           <Box>
-            <Img src={Shoping.image} alt={Shoping.title} />
+            <Img
+              src={Shoping.image}
+              alt={Shoping.title}
+              h={240}
+              w={240}
+              backgroundColor="brown"
+            />
           </Box>
           <Box>
             <Center>
@@ -64,7 +71,7 @@ export const CardDetailPage = () => {
               </Text>
             </Center>
             <Center>
-              <Text fontSize="20px" fontWeight="bold" color="brown">
+              <Text fontSize="20px" fontWeight="bold" color="orange">
                 ${Shoping.price}
               </Text>
             </Center>
@@ -74,13 +81,12 @@ export const CardDetailPage = () => {
 
             <Center display={'flex'} flexWrap={'wrap'}>
               {' '}
-              <Text fontSize="15px" fontWeight="bold" margin="auto">
+              <Text p={5} fontSize="18px" fontWeight="bold" margin="auto">
                 {Shoping.description}
               </Text>
             </Center>
-
-            <Flex>
-              <Center>
+            <Center>
+              <Flex p={6} margin="auto">
                 <Button
                   bg={'red.400'}
                   variant={'outline'}
@@ -88,8 +94,7 @@ export const CardDetailPage = () => {
                 >
                   Remove
                 </Button>
-              </Center>
-              <Center>
+
                 <Link to={`/Shopping/card`}>
                   {' '}
                   <Button
@@ -101,8 +106,8 @@ export const CardDetailPage = () => {
                     Add
                   </Button>
                 </Link>
-              </Center>
-            </Flex>
+              </Flex>
+            </Center>
           </Box>
         </Box>
       </Center>

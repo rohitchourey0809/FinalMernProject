@@ -5,7 +5,6 @@ import { CardAllItem } from './CardAllItem';
 
 export const Card = () => {
   const [Carddata, setshopData] = useState([]);
-  // const [rating, setrating] = useState([]);
 
   useEffect(() => {
     axios
@@ -13,7 +12,6 @@ export const Card = () => {
       .then(response => {
         console.log(response.data);
         setshopData(response.data);
-        // setrating(response.data.rating.rate);
       })
       .catch(err => {
         console.log(err);
@@ -23,7 +21,18 @@ export const Card = () => {
   return (
     <>
       {Carddata.map((e, index) => {
-        return <CardAllItem key={e.id} {...e} />;
+        return (
+          <CardAllItem
+            key={e.id}
+            id={e.id}
+            title={e.title}
+            category={e.category}
+            rating={e.rating.rate}
+            image={e.image}
+            description={e.description}
+            price={e.price}
+          />
+        );
       })}
     </>
   );
