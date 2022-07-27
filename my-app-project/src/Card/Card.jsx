@@ -8,7 +8,7 @@ export const Card = () => {
 
   useEffect(() => {
     axios
-      .get('https://json-deploy.herokuapp.com/card')
+      .get('https://finalmernproject.herokuapp.com/card')
       .then(response => {
         console.log(response.data);
         setshopData(response.data);

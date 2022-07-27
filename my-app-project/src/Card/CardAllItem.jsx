@@ -10,7 +10,7 @@ export const CardAllItem = props => {
     console.log('deleteId', deleteid);
 
     axios
-      .delete(`https://json-deploy.herokuapp.com/card/${deleteid}`)
+      .delete(`https://finalmernproject.herokuapp.com/card/${deleteid}`)
       .then(response => {
         console.log('response', response);
         window.location.reload(false);

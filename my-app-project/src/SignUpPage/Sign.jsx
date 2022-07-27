@@ -34,7 +34,7 @@ export const Sign = () => {
         PASSWORD: password,
       };
       axios
-        .post('https://json-deploy.herokuapp.com/register', payload)
+        .post('https://finalmernproject.herokuapp.com/register', payload)
         .then(response => {
           console.log(response.data);
           alert(`SignUp Successful  -${response.status}`);

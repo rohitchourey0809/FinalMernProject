@@ -27,7 +27,7 @@ export const CardDetailPage = () => {
   const AddCardProduct = e => {
     console.log('Addcard id', e);
     axios
-      .post('https://json-deploy.herokuapp.com/card', e)
+      .post('https://finalmernproject.herokuapp.com/card', e)
       .then(response => {
         console.log(response);
       })

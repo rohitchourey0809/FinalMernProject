@@ -26,7 +26,7 @@ export const Login = () => {
         PASSWORD: password,
       };
       axios
-        .post('https://json-deploy.herokuapp.com/login', payload)
+        .post('https://finalmernproject.herokuapp.com/login', payload)
         .then(response => {
           alert(`login Successful  -${response.status}`);
           navigate('/');
