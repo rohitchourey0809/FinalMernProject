@@ -6,7 +6,7 @@
   margin: auto;
   flex-direction: column;
   text-align: left;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: 'dark-lg';
   transition-property: all;
   transition-duration: 3s;
 }
@@ -63,7 +63,7 @@
 }
 
 #FULLDIV {
-  background-color: rgb(25,132,84);
+  background-color: rgb(34, 45, 40);
   margin: auto;
   text-align: center;
   width: 50%;

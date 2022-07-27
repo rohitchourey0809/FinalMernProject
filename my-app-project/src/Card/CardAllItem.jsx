@@ -4,6 +4,7 @@ import { Box, Button, Center, Flex, Img, Text, VStack } from '@chakra-ui/react';
 import { Rating } from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+// import './Carditem.css';
 export const CardAllItem = props => {
   console.log(props.rating.rate);
   const RemoveProduct = deleteid => {
@@ -19,7 +20,7 @@ export const CardAllItem = props => {
       .catch(err => console.log(err));
   };
   return (
-    <div>
+    <>
       <VStack>
         <Center
           // border="2px"
@@ -30,12 +31,13 @@ export const CardAllItem = props => {
           boxShadow="2xl"
           backgroundColor="brown"
         >
-          <Box display="flex" p={10} margin={1}>
+          <Box display="flex" p={15} margin={1}>
             <Box>
               <Img
                 src={props.image}
                 alt={props.title}
-                p={2}
+                width={300}
+                height={300}
                 backgroundColor="brown"
               />
             </Box>
@@ -111,6 +113,6 @@ export const CardAllItem = props => {
           </Box>
         </Center>
       </VStack>
-    </div>
+    </>
   );
 };

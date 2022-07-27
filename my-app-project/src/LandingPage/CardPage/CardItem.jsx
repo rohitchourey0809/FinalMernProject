@@ -20,6 +20,7 @@ export const CardItem = props => {
       <Grid templateColumns="repeat(2, 300px)" className="container">
         <Center py={6}>
           <GridItem
+          
             width={'1000px'}
             boxShadow={'2xl'}
             rounded={'md'}

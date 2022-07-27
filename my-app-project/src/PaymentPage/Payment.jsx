@@ -24,7 +24,7 @@ export const Payment = () => {
   }
   return (
     <>
-      <Box className="container">
+      <Box className="container" color="gold">
         <Flex justifyContent="space-evenly">
           <Stack>
             <Box className="Img-box" height="50px" width="200px">

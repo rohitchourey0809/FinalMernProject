@@ -46,7 +46,7 @@ export const CardPages = () => {
   return (
     <>
       {/* Search by q */}
-      <Box className="center SearchByQ">
+      <Box className="SearchByQ">
         <Flex>
           {' '}
           <Center margin="auto">
@@ -162,27 +162,31 @@ export const CardPages = () => {
           </Flex>
         </Stack>
       </VStack>
-      <Box marginLeft="250">
-        <Grid templateColumns="repeat(2, 1fr)">
-          {Shoping.length &&
-            Shoping.map(e => {
-              return (
-                <CardItem
-                  key={e.id}
-                  id={e.id}
-                  Title={e.title}
-                  Category={e.category}
-                  rating={e.rating.rate}
-                  imageUrl={e.image}
-                  Description={e.description}
-                  Price={e.price}
-                />
-              );
-            })}
-        </Grid>
+      <Stack>
+        <Center>
+          <Box margin="auto">
+            <Grid templateColumns="repeat(2, 1fr)">
+              {Shoping.length &&
+                Shoping.map(e => {
+                  return (
+                    <CardItem
+                      key={e.id}
+                      id={e.id}
+                      Title={e.title}
+                      Category={e.category}
+                      rating={e.rating.rate}
+                      imageUrl={e.image}
+                      Description={e.description}
+                      Price={e.price}
+                    />
+                  );
+                })}
+            </Grid>
 
-        <Center> {/* <Checkout /> */}</Center>
-      </Box>
+            <Center> {/* <Checkout /> */}</Center>
+          </Box>
+        </Center>
+      </Stack>
     </>
   );
 };

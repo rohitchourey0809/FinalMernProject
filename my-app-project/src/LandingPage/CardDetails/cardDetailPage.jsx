@@ -35,16 +35,27 @@ export const CardDetailPage = () => {
         console.log(error);
       });
   };
+  const RemoveProduct = deleteid => {
+    console.log('deleteId', deleteid);
 
+    axios
+      .delete(`https://finalmernproject.herokuapp.com/card/${deleteid}`)
+      .then(response => {
+        console.log('response', response);
+        window.location.reload(false);
+        alert(`Delete Item Successful: ${deleteid}`);
+      })
+      .catch(err => console.log(err));
+  };
   console.log('shopping', Shoping);
   return (
     // <div></div>
-    <VStack>
+    <VStack className="container">
       <Center
         height="100%"
         width="100%"
         marginTop={20}
-        p={50}
+        p={30}
         boxShadow="dark-lg"
         backgroundColor="brown"
       >
@@ -53,8 +64,8 @@ export const CardDetailPage = () => {
             <Img
               src={Shoping.image}
               alt={Shoping.title}
-             
-              p={10}
+              width={800}
+              height={300}
               backgroundColor="brown"
             />
           </Box>
@@ -88,6 +99,9 @@ export const CardDetailPage = () => {
             <Center>
               <Flex p={6} margin="auto">
                 <Button
+                  onClick={() => {
+                    RemoveProduct(Shoping.id);
+                  }}
                   bg={'red.400'}
                   variant={'outline'}
                   leftIcon={<DeleteIcon />}
