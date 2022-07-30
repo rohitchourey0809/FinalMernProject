@@ -31,17 +31,16 @@
 // });
 
 const jsonServer = require("json-server");
- const connect = require('./Config/db');
+const connect = require("./Config/db");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
-
 
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 server.use(router);
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 server.listen(port, async () => {
   await connect();
