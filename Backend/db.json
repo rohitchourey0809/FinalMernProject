@@ -239,6 +239,30 @@
         "rate": 3.6,
         "count": 145
       }
+    },
+    {
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "id": 21
+    },
+    {
+      "title": "Goods [pack]",
+      "price": 109878.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "id": 22
     }
   ],
   "card": [
@@ -319,8 +343,6 @@
       "PASSWORD": "R@1234567",
       "id": 9
     },
-  
-
     {
       "FIRSTNAME": "gya",
       "LASTNAME": "chourey",
@@ -435,6 +457,36 @@
       "EMAIL": "rohit_fw15_206@masai.school",
       "PASSWORD": "123",
       "id": 28
+    },
+    {
+      "id": 29
+    },
+    {
+      "id": 30
+    },
+    {
+      "FIRSTNAME": "ROHIT",
+      "LASTNAME": "cHourey",
+      "EMAIL": "regsiter@12345",
+      "PASSWORD": "R@12345",
+      "ROLE": "Admin",
+      "id": 31
+    },
+    {
+      "FIRSTNAME": "mOHIT",
+      "LASTNAME": "cHourey",
+      "EMAIL": "regsiter@",
+      "PASSWORD": "R@12345",
+      "ROLE": "Admin",
+      "id": 32
+    },
+    {
+      "FIRSTNAME": "mOHIT",
+      "LASTNAME": "cHourey",
+      "EMAIL": "regsiter@",
+      "PASSWORD": "R@12345",
+      "ROLE": "Staff",
+      "id": 33
     }
   ],
   "login": [

@@ -1,9 +1,12 @@
 import {
   Box,
   Button,
+  Checkbox,
+  CheckboxGroup,
   FormControl,
   FormLabel,
   Input,
+  Stack,
   Text,
 } from '@chakra-ui/react';
 import axios from 'axios';
@@ -16,13 +19,15 @@ export const Sign = () => {
   const [lastname, setlastname] = useState('');
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
+  const [role, setrole] = useState('');
   const navigate = useNavigate();
   async function Signup(e) {
     if (
       firstname === '' &&
       lastname === '' &&
       email === '' &&
-      password === ''
+      password === '' &&
+      role === ''
     ) {
       navigate('/signup');
       return alert('Please enter your first name');
@@ -32,6 +37,7 @@ export const Sign = () => {
         LASTNAME: lastname,
         EMAIL: email,
         PASSWORD: password,
+        ROLE: role,
       };
       axios
         .post('https://finalmernproject.herokuapp.com/register', payload)
@@ -113,6 +119,29 @@ export const Sign = () => {
               placeholder="Password"
               class="inputsize"
             />
+            <br />
+            <br />
+            <FormLabel id="headingname">ROLE</FormLabel>
+            <CheckboxGroup
+              colorScheme="green"
+              //   value="role"
+              //   onChange={e => setrole(e.target.value)}
+            >
+              <Stack spacing={[1, 5]} direction={['column', 'row']}>
+                <Checkbox value="Admin" onChange={e => setrole(e.target.value)}>
+                  Admin
+                </Checkbox>
+                <Checkbox
+                  value="Manager"
+                  onChange={e => setrole(e.target.value)}
+                >
+                  Manager
+                </Checkbox>
+                <Checkbox value="Staff" onChange={e => setrole(e.target.value)}>
+                  Staff
+                </Checkbox>
+              </Stack>
+            </CheckboxGroup>
             <br />
             <br />
 
