@@ -487,6 +487,22 @@
       "PASSWORD": "R@12345",
       "ROLE": "Staff",
       "id": 33
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "rohit@gmail.com",
+      "PASSWORD": "rohit@123",
+      "ROLE": "Admin",
+      "id": 34
+    },
+    {
+      "FIRSTNAME": "kohit",
+      "LASTNAME": "Chourey",
+      "EMAIL": "ro@gmail.com",
+      "PASSWORD": "rohit@123",
+      "ROLE": "Admin",
+      "id": 35
     }
   ],
   "login": [
